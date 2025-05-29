@@ -1,0 +1,13 @@
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3/partition_table/partition-table.bin 0x10000 build-ESP32_GENERIC_S3/micropython.bin
+or from the "build-ESP32_GENERIC_S3" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+bootloader  @0x000000    19152  (   13616 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2549904  (  595824 remaining)
+total                  2615440
+
