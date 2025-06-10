@@ -1,0 +1,15 @@
+Successfully created esp32c3 image.
+micropython.bin binary size 0x2be940 bytes. Smallest app partition is 0x300000 bytes. 0x416c0 bytes (9%) free.
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32c3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 4MB --flash_freq 80m 0x0 build-ESP32_GENERIC_C3/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_C3/partition_table/partition-table.bin 0x10000 firmware.bin
+
+ python -m esptool --chip esp32c3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+bootloader  @0x000000    17376  (   15392 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2877760  (  267968 remaining)
+total                  2943296
