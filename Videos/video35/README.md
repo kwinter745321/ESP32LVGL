@@ -6,10 +6,10 @@ This is video 35 on MicroPython and LVGL. This is the second video of a two part
 The hardware, mounted on a breadboard, is the WeAct Studios ESP32-S3-Oct (N16R8) USB board and a standard ILI9341 display.
 
 In this video,
-    • Demonstrate the temp-humidity program again (but on the new firmware)
-    • Discuss the firmware build, the API and setup changes
-    • Review the code on a simple example
-    • Provide impressions
+ - Demonstrate the temp-humidity program again (but on the new firmware)
+ - Discuss the firmware build, the API and setup changes
+ - Review the code on a simple example
+ - Provide impressions
 
 
 The code for this video is available at the GitHub site:
