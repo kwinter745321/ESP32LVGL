@@ -4,10 +4,10 @@
 This is video 37 on MicroPython and LVGL. This video introduces MP-LVGL firmware for the ESP32-Generic based US boards.  Two implementations are discussed: 1) a generic ESP32-WROOM-32 USB board wired to an ILI9341 display (with Touch), and 2) the ESP-2432S028 USB Board aka Cheap Yellow Display, (CYD). We discuss the wiring and drivers.
 
 In this video,
-    • Discuss the two test rigs
-    • Discuss the wiring for the ESP32 rig
-    • Discuss the Display Driver file
-    • Demonstrate a simple button program and review code
+ - Discuss the two test rigs
+ - Discuss the wiring for the ESP32 rig
+ - Discuss the Display Driver file
+ - Demonstrate a simple button program and review code
 
 The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL
