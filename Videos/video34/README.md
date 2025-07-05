@@ -6,9 +6,9 @@ This is video 34 on MicroPython and LVGL. This is the first video of a two part 
 The hardware, mounted on a breadboard, is the WeAct Studios ESP32-S3-Oct (N16R8) USB board and a standard ILI9341 display.
 
 In this video,
-    • Present firmware, wiring and setup changes
-    • Demonstrate using two previous example
-    • Provide impressions
+ - Present firmware, wiring and setup changes
+ - Demonstrate using two previous example
+ - Provide impressions
 
 
 The code for this video is available at the GitHub site:
