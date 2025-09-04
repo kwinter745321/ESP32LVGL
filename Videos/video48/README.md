@@ -6,11 +6,11 @@
 This is video 48 on MicroPython and LVGL 9.3. This video presents the detailed steps to build MicroPython firmware with LVGL.  The Test Rig uses an ESP32-S3-DevKitC-1 USB board connected to an ILI9341 display.
 
 In this video, 
-    • Introduce Kevin Schlosser’s GitHub site
-    • Install the prerequisite software for the Build environment.
-    • Perform the build steps
-    • Deploy the firmware
-    • Review a simple LVGL example and its configuration 
+ - Introduce Kevin Schlosser’s GitHub site
+ - Install the prerequisite software for the Build environment.
+ - Perform the build steps
+ - Deploy the firmware
+ - Review a simple LVGL example and its configuration 
 
 The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL
