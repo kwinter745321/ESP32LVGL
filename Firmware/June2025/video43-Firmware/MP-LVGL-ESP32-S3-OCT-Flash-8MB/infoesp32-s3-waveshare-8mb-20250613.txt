@@ -1,0 +1,24 @@
+micropython.bin binary size 0x25bb70 bytes. Smallest app partition is 0x25c000 bytes. 0x490 bytes (0%) free.
+Warning: The smallest app partition is nearly full (0% free space left)!
+Project build complete. To flash, run:
+idf.py flash
+or
+idf.py -p PORT flash
+or
+python -m esptool --chip esp32s3 -b 460800 --before default_reset --after no_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+or from the "lvgl_micropython/lib/micropython/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT" directory
+python -m esptool --chip esp32s3 -b 460800 --before default_reset --after no_reset write_flash "@flash_args"
+bootloader  @0x000000    19600  (   13168 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2472816  (    1168 remaining)
+total                  2538352
+make: Leaving directory 'lvgl_micropython/lib/micropython/ports/esp32'
+
+esptool.py v4.8.1
+Wrote 0x26bb70 bytes to file lvgl_micropython/build/lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin, ready to flash to offset 0x0
+
+
+To flash firmware:
+Replace `(PORT)` with the serial port for your esp32 and run the following command.
+
+python -m esptool --chip esp32s3 -p (PORT) -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m --erase-all 0x0 lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin
