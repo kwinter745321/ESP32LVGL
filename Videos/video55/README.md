@@ -4,7 +4,7 @@
 
 # Topic 
 
-This is video 55 on setting up MicroPython setting up LVGL on an ESP32-S3 Octal (8MB PSRAM) USB Board.  We demonstrate two GUI code examples. We discuss the hardware and wiring.  We mount the ESP32-S3-DevKitC-1 USB board on a Base and the ILI9341 display on a breadboard.
+This is video 55 on setting up MicroPython setting up LVGL on an ESP32-S3 Octal (8MB PSRAM) USB Board.  We demonstrate two GUI code examples. We discuss the hardware and wiring.  We mount the ESP32-S3-DevKitC-1 USB board on a Base and the ILI9341 display on a breadboard.  The firmware used is the standard MicroPython and LVGL software; built in May 2025.
 
 In this video, 
  - Demonstrate our slider and button examples
