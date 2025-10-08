@@ -7,10 +7,10 @@
 This video discusses the LCD_BUS firmware. Our display_driver was developed for MicroPython 1.24 LVGL 9.2.2. And the maintainer modified the RGB driver module in the source. In this video, we show the simple update to fix the display_driver. Since that is easy; we also show how to update to the latest firmware.
 
 In this video, 
-    • Demonstrate the display_driver’s issue and update it
-    • Discuss the different firmware building approachs
-    • Explain the driver components needed for the Waveshare display
-    • Show how to Build the latest firmware using docker
+ - Demonstrate the display_driver’s issue and update it
+ - Discuss the different firmware building approachs
+ - Explain the driver components needed for the Waveshare display
+ - Show how to Build the latest firmware using docker
 
 The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video58
