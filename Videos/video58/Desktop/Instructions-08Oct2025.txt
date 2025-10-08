@@ -1,0 +1,35 @@
+Instructions
+08 October 2025
+
+We pulled Ubuntu 24.04 LTS and installed docker.
+Ubuntu usually includes python.
+
+Additionally, we performed these pre-requisites
+
+sudo apt update
+sudo apt install xxxx
+
+where xxx is the following:
+build-essential 
+cmake 
+ninja-build 
+git
+libusb-1.0-0-dev
+gcc-arm-none-eabi
+net-tools
+nano
+mc
+python3-venv
+
+Then we pulled the LVGL/MicroPython source:
+git clone https://github.com/lvgl_micropython.git
+
+We then cd into the lvgl_micropython directory and performed the following:
+python3 make.py esp32 BOARD=ESP32_GENERIC_S3 BOARD_VARIANT=SPIRAM_OCT DISPLAY=ili9341 INDEV=gt911 INDEV=xpt2046
+
+Now, cd into the build directory ("build" was created by the above python program)
+Here resides two files:
+lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin
+partitions.csv
+
+Finally you can use a sftp command to push the bin to your desktop.
