@@ -46,4 +46,4 @@ python3 make.py esp32 BOARD=ESP32_GENERIC_S3 BOARD_VARIANT=SPIRAM_OCT DISPLAY=il
 
 We include this file in the firmware_alternate folder.
 
-Thanks donpap871 !
+Thanks donpapa871 !
