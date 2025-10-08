@@ -1,6 +1,6 @@
 # README - video 58
 
-08 October 2025
+08 October 2025  (late 08 October 2025 update see below)
 
 # Scope
 
@@ -37,4 +37,11 @@ Firmware
      - sdcard_driver.py        in case you want to use the sd card (see the test_button2_lcdbus.py program as an example)
  - font           a directory of font files
 
- 
+ # Late Update - 08 October 2025
+
+ A viewer suggested that we build the firmware with the RGB and ch422g drivers.
+ So we did.  Here is the command:
+
+python3 make.py esp32 BOARD=ESP32_GENERIC_S3 BOARD_VARIANT=SPIRAM_OCT DISPLAY=ili9341 DISPLAY=rgb_display DISPLAY=st7796 EXPANDER=ch422g INDEV=gt911 INDEV=xpt2046 clean
+
+We include this file in the firmware_alternate folder.
