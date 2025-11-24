@@ -18,3 +18,23 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video65
 
 # Files
 
+ - Desktop
+
+    - test_button_display.py
+    - test_slider_display.py
+    - test_matrix4_display.py
+    - test_chart_display.py
+
+ - Firmware
+
+    - firmware.bin
+    - info 
+
+ - Flash
+
+    - display_driver.py         Modifed for this project
+    - ili9xxx.py                Classes for certain displays: ILi9341, ST7796, and GC9A01
+    - lv_utils.py               A utility
+    - st77xx.py                 Holds classes for certain displays: st7735 (and is a base class for ili9xxx)
+    - xpt2046.py                A specific touchscreen driver for the xpt2046 hardware
+
