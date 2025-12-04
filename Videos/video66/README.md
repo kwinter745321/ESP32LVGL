@@ -10,7 +10,7 @@ You can fetch the programs from the Github, and begin using them immediately.
 In this video, 
  - Demonstrate our test program and the enhanced version.
  - Discuss our research approach and code snippet.
- - Discuss the test Rig wiring.
+ - Discuss the Test Rig wiring.
  - Walk through the test code.
 
 As mentioned, the code for this video is available at the GitHub site:
