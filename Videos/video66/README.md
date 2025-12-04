@@ -24,6 +24,20 @@ Some images used in this video and code were freely obtained at www.freepik.com
 
  - Desktop
 
+    - test_slider_display.py            - Our test slider program
+    - test_slider2_display.py           - The enhanced version
+
  - Flash
 
+    - display_driver.py             - Edit this for different display type or pin definitions
+    - ili9xxx.py                    - ILI9xxx display type classes
+    - lv_utils.py                   - a LVGL utility
+    - st77xx.py                     - ST77xx display type classes
+    - widget.py                     - Three classes to enhance a screen of LVGL widgets
+    - xpt2046.py                    - XPT2046 touchscreen driver
+
+    Images
+    - Arrow.png                     - Red arrow shape (32x32 pixels)
+    - Button48.pbg                  - Custom button "Right"  (48x48 pixels)
+    - Button48L.png                 - Custom button "Left"  (48x48 pixels)
  
