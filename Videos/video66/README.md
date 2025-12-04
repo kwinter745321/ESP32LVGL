@@ -1,0 +1,29 @@
+# README.md - Video 66
+
+04 December 2025
+
+# Scope
+This is video 66 on embedded solutions. In this video, we learn to improve our LVGL widgets. We start with one of our simple test programs and enhance its widgets with images and styles. The result is a colorful display that is also functional.  Our Test Rig is an ESP32-S3-N16R8 USB Board wired to an integrated ILI9341 display and xpt2046 touchscreen.
+
+You can fetch the programs from the Github, and begin using them immediately. 
+
+In this video, 
+    • Demonstrate our test program and the enhanced version.
+    • Discuss our research approach and code snippet.
+    • Discuss the test Rig wiring.
+    • Walk through the test code.
+
+As mentioned, the code for this video is available at the GitHub site:
+https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video66
+
+Background music is 7th Life by Adam MacDougall which is You Tube Licensed as not requiring an attribution.
+
+Some images used in this video and code were freely obtained at www.freepik.com
+
+# Files
+
+ - Desktop
+
+ - Flash
+
+ 
