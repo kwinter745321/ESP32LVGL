@@ -8,10 +8,10 @@ This is video 66 on embedded solutions. In this video, we learn to improve our L
 You can fetch the programs from the Github, and begin using them immediately. 
 
 In this video, 
-    • Demonstrate our test program and the enhanced version.
-    • Discuss our research approach and code snippet.
-    • Discuss the test Rig wiring.
-    • Walk through the test code.
+ - Demonstrate our test program and the enhanced version.
+ - Discuss our research approach and code snippet.
+ - Discuss the test Rig wiring.
+ - Walk through the test code.
 
 As mentioned, the code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video66
