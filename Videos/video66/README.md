@@ -1,6 +1,7 @@
 # README.md - Video 66
 
 04 December 2025
+05 Dec 2025 - Included the firmware I used in the video.
 
 # Scope
 This is video 66 on embedded solutions. In this video, we learn to improve our LVGL widgets. We start with one of our simple test programs and enhance its widgets with images and styles. The result is a colorful display that is also functional.  Our Test Rig is an ESP32-S3-N16R8 USB Board wired to an integrated ILI9341 display and xpt2046 touchscreen.
@@ -26,6 +27,11 @@ Some images used in this video and code were freely obtained at www.freepik.com
 
     - test_slider_display.py            - Our test slider program
     - test_slider2_display.py           - The enhanced version
+
+ - Firmware
+    - firmware.bin                      - firmware: MicroPython v1.20.0-2510.gacfeb7b7e.dirty on 2025-11-23; Generic ESP32S3 module with ESP32S3
+    - info-esp32-20250517.txt           - Information generated during build
+
 
  - Flash
 
