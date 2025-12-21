@@ -1,0 +1,17 @@
+python -m esptool --chip esp32s3 -b 460800 --before default_reset --after no_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+or from the "/home/lvgl_micropython/lib/micropython/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT" directory
+python -m esptool --chip esp32s3 -b 460800 --before default_reset --after no_reset write_flash "@flash_args"
+bootloader  @0x000000    19232  (   13536 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2933824  (    3008 remaining)
+total                  2999360
+make: Leaving directory '/home/lvgl_micropython/lib/micropython/ports/esp32'
+
+esptool.py v4.11.dev1
+Wrote 0x2dc440 bytes to file /home/lvgl_micropython/build/lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin, ready to flash to offset 0x0
+
+
+To flash firmware:
+Replace `(PORT)` with the serial port for your esp32 and run the following command.
+
+/root/.espressif/python_env/idf5.5_py3.12_env/bin/python -m esptool --chip esp32s3 -p (PORT) -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m --erase-all 0x0 /home/lvgl_micropython/build/lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin
