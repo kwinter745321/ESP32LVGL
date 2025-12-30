@@ -8,14 +8,22 @@ This is video 69 on a MicroPython embedded solution. In this video, we discuss t
 You can fetch the firmware and programs from the GitHub, and begin using them immediately.  
 
 In this video, 
-    • Demonstrate micropython network features and generic ILI9341 graphics.
-    • Present the Waveshare ESP32-P4-Module-DEV-KIT board.
-    • Present the firmware and Test Rig wiring.
-    • Walk through the program code.
+    - Demonstrate micropython network features and generic ILI9341 graphics.
+    - Present the Waveshare ESP32-P4-Module-DEV-KIT board.
+    - Present the firmware and Test Rig wiring.
+    - Walk through the program code.
 
 The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video69
 
 # Files
 
+ - Desktop
 
+ - Firmware
+
+ - Flash
+
+# Graphics
+
+Obtain an up to date copy of rdagger's repository by visiting his github: https://github.com/rdagger/micropython-ili9341
