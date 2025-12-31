@@ -37,9 +37,7 @@ class Demo(object):
         # Y needs to be flipped
         y = (self.display.height - 1) - y
         x = (self.display.width - 1) - x
-        hold = y
-        y = x
-        x = hold
+        y,x = x,y
         # Display coordinates
         self.display.draw_text8x8(self.display.width // 2 - 32,
                                   self.display.height - 9,
