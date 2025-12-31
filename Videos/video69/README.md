@@ -27,6 +27,15 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video69
         - demo_fonts_rotated.py
         - demo_touch.py
 
+ Note: We actually connected the LED pin of the display to 3.3volt pin on the MCU (rather then pin 46).
+ Though, if you like progam control of the Backlight (BL) then you can configure:
+ ```python
+ from machine import Pin
+ bl = Pin(46, Pin.OUT)
+ bl.on()   # turns on the backlight
+ ```
+
+
  - Firmware
     ESP32_GENERIC_P4-C6_WIFI-20251209-v1.27.0.bin (from MicroPython.org)
 
