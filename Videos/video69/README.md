@@ -19,11 +19,27 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video69
 # Files
 
  - Desktop
+    - test_network.py
+    - test_wifi.py
+    - Graphics
+        - demo_color_palette.py
+        - demo_clear.py
+        - demo_fonts_rotated.py
+        - demo_touch.py
 
  - Firmware
+    ESP32_GENERIC_P4-C6_WIFI-20251209-v1.27.0.bin
 
  - Flash
+    - fonts
+    - images
+    - ili9341.py
+    - secret.py  (edit me)
+    - xglcd_font.py
+    - xpt2046.py
 
+- Graphics
+    - zip file from rdagger's GitHub
 # Graphics
 
 Obtain an up to date copy of rdagger's repository by visiting his github: https://github.com/rdagger/micropython-ili9341
