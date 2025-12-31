@@ -28,7 +28,7 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video69
         - demo_touch.py
 
  - Firmware
-    ESP32_GENERIC_P4-C6_WIFI-20251209-v1.27.0.bin
+    ESP32_GENERIC_P4-C6_WIFI-20251209-v1.27.0.bin (from MicroPython.org)
 
  - Flash
     - fonts
