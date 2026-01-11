@@ -20,8 +20,10 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video71
 
  - Arduino
 
-     These are the two example programs that we modified for the 8 inch diplay.
+     These are the two example Wave share programs that we modified for the 8 inch diplay.
      Here is our test_slider program (converted to Arduino code).
+
+     Also, there are two programs we created using the LVGL9_Arduino as a template.  Then modifying it to orient in Landscape. (Updated the Touch for Landscape.)  The sketch_test_chart.ino consists of three charts copied (essentially) from the LVGL 9.3 online documentation.  So, that was interesting in itself.
 
  - Arduino-libraries
 
