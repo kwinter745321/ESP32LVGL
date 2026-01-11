@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "bit": "cpp",
+        "cmath": "cpp",
+        "limits": "cpp"
+    }
+}
