@@ -20,24 +20,24 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video73
 
  - Firmware
  
- The file was built in December for a generic ESP32-S3 N16R8 device.
- That is, a USB board with 16 MB flash and 8MB PSRAM
+    - The file was built in December for a generic ESP32-S3 N16R8 device.
+    - That is, a USB board with 16 MB flash and 8MB PSRAM
 
  - Desktop
 
-  - test_scan_i2c.py
-  - test_button_display.py
-  - test_slider_display.py
-  - test_matrix_display.py
+    - test_scan_i2c.py
+    - test_button_display.py
+    - test_slider_display.py
+    - test_matrix_display.py
 
  - Flash
 
-  - ctp_ft6x36.py
-  - display_driver.py
-  - ili9xxx.py
-  - lv_utils.py
-  - pca9554.py
-  - st77xx.py
+    - ctp_ft6x36.py
+    - display_driver.py
+    - ili9xxx.py
+    - lv_utils.py
+    - pca9554.py
+    - st77xx.py
   
 
  
