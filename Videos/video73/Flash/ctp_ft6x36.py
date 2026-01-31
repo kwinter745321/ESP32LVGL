@@ -1,6 +1,7 @@
 # ctp_ft6x36.py
 #
-# Created: 24 June 2025 
+# Created: 24 June 2025
+# Modified: 30 January 2026 to support tca9554 device
 #
 # Copyright (C) 2025 KW Services.
 # MIT License
@@ -12,7 +13,7 @@ from machine import I2C, Pin, SoftI2C
 from machine import Timer
 import time
 
-import pca9554
+import tca9554
 
 class ft6x36:
     
@@ -32,8 +33,8 @@ class ft6x36:
         self.i2c = SoftI2C(sda=Pin(sda), scl=Pin(scl), freq=freq)    
         #ctp = Pin(irq, Pin.IN)
         # Touch Int
-        pca = pca9554.Pca9554(0x20)
-        pca.write_config_port(2, pca9554.INPUT)
+        tca = tca9554.TCA9554(0x20)
+        tca.write_config_port(2, tca9554.INPUT)
         self.addr = addr
         try:
             print("FT6X36 touch IC ready (fw id 0x{0:X} rel {1:d}, lib {2:X})".format( \

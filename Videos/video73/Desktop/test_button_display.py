@@ -4,6 +4,7 @@
 # Update: 14 September 2025
 # Update: 21 November 2025
 # Update: 17 January 2026 
+# Update: 30 January 2026 to include count label
 #
 # Copyright (C) 2026 KW Services.
 # MIT License
@@ -37,8 +38,10 @@ scr = lv.obj()
 lv.screen_load(scr)
 
 scr.set_style_bg_color(lv.color_hex(0),lv.PART.MAIN)
-scr.set_style_border_width(2, lv.PART.MAIN)
-scr.set_style_border_color(lv.palette_main(lv.PALETTE.BLUE),lv.PART.MAIN)
+# scr.set_style_border_width(2, lv.PART.MAIN)
+# scr.set_style_border_color(lv.palette_main(lv.PALETTE.BLUE),lv.PART.MAIN)
+
+
 
 ### Style  ###################
 btnstyle = lv.style_t()
@@ -64,10 +67,17 @@ lbl.set_style_text_font(lv.font_montserrat_24, lv.PART.MAIN)
 
 cnt = 1
 
+countlbl = lv.label(scr)
+countlbl.align_to(btn, lv.ALIGN.OUT_TOP_MID, -50, -55)
+countlbl.set_text("Count: " + str(cnt))
+countlbl.set_style_text_color(lv.color_white(), lv.PART.MAIN)
+countlbl.set_style_text_font(lv.font_montserrat_24, lv.PART.MAIN)
+
 def btn_cb(event):
     global cnt, xyz
-    print("Clicked button:",cnt)
+    print("Clicked button: ",cnt)
     cnt = cnt + 1
+    countlbl.set_text("Count: " + str(cnt))
 
 
 btn.add_event_cb(btn_cb, lv.EVENT.CLICKED, None)

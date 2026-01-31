@@ -2,6 +2,7 @@
 
 20 January 2026
 23 January 2026 - added an image of deploying firmware
+31 January 2025 - Added count label to test_button and revised tca9554 driver
 
 # Scope
 This is video 73 on a MicroPython/LVGL embedded solution. In this video, we look at the Waveshare device and learn how to update the drivers.  We are using a firmware built for ESP32-Generic-S3 N16R8 USB boards (which includes this device).  We discuss and demonstrate three test LVGL programs.  In this video we focus on just getting the Display and Touchscreen to work.
