@@ -19,3 +19,23 @@ The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video73
 
 # Files
+
+- Desktop
+
+  - test_audio_display.py
+
+- Firmware
+
+  - firmware.bin (created in December 2025 for standard ESP32-S3 N16R8 usb module)
+
+- Datasheets
+
+  - several datasheets pertinent to the components
+
+- Flash
+
+  - Various middleware and hardware driver files
+
+- Music
+
+  - snippets oi the 7th Life MP3 file.  Sample Rate 44100  Mono 16-bit

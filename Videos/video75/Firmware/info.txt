@@ -1,0 +1,19 @@
+Successfully created esp32s3 image.
+Generated /home/lv_micropython/ports/esp32/build-ESP32_GENERIC_S3/micropython.bin
+[2238/2238] cd /home/lv_micropython/ports/esp32/build-ESP3...opython/ports/esp32/build-ESP32_GENERIC_S3/micropython.bin
+micropython.bin binary size 0x27d9d0 bytes. Smallest app partition is 0x300000 bytes. 0x82630 bytes (17%) free.
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3/partition_table/partition-table.bin 0x10000 build-ESP32_GENERIC_S3/micropython.bin
+or from the "/home/lv_micropython/ports/esp32/build-ESP32_GENERIC_S3" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+bootloader  @0x000000    19152  (   13616 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2611664  (  534064 remaining)
+total                  2677200
+make: Leaving directory '/home/lv_micropython/ports/esp32'
+
