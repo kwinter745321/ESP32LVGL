@@ -3,6 +3,7 @@
 20 January 2026
 23 January 2026 - added an image of deploying firmware
 31 January 2025 - Added count label to test_button and revised tca9554 driver
+06 February 2026 - see NOTE in Flash of Files
 
 # Scope
 This is video 73 on a MicroPython/LVGL embedded solution. In this video, we look at the Waveshare device and learn how to update the drivers.  We are using a firmware built for ESP32-Generic-S3 N16R8 USB boards (which includes this device).  We discuss and demonstrate three test LVGL programs.  In this video we focus on just getting the Display and Touchscreen to work.
@@ -41,8 +42,17 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video73
     - pca9554.py
     - st77xx.py
   
+ - FixedFlash
 
- # Deploy Firmware
+   - display_driver.py
+
+      One viewer had trouble getting his LCD to Reset.  He solved by adding a function called lcd_reset()
+      to the display_driver.  This code toggles the LCD RST and then leaves it set.
+
+
+
+
+# Deploy Firmware
 
  Here is an image when I installed the firmware using Thonny:
   ![Thonny deploying a firmware](./images/FirmwareInstalla.jpg)
