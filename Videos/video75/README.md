@@ -1,6 +1,8 @@
 # README - Video 75
 
 05 February 2026
+06 February 2026 -  See Note below if your LCD will not display properly
+
 
 # Scope
 This is video 75 on a MicroPython/LVGL embedded solution. In this video, we look at the Waveshare device and find a simple way to setup the I2S audio to play sounds.  We are using a firmware built for ESP32-Generic-S3 N16R8 USB boards (which includes this device).  We demonstrate a simple audio test LVGL program.  In this video we focus on just getting the audio to play sounds.
@@ -35,6 +37,8 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video73
 - Flash
 
   - Various middleware and hardware driver files
+
+  Note: One viewer had trouble getting his LCD to reset.  If this happens to you then please use the display_driver.py found in FixedFlash of Video 73.
 
 - Music
 
