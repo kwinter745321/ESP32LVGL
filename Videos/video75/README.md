@@ -1,7 +1,7 @@
 # README - Video 75
 
-05 February 2026
-06 February 2026 -  See Note below if your LCD will not display properly
+ - 05 February 2026
+ - 06 February 2026 -  See Note below if your LCD will not display properly
 
 
 # Scope
