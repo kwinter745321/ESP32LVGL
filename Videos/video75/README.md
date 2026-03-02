@@ -18,7 +18,7 @@ In this video,
  - Discuss the driver changes and how to convert MP3s to WAV file.
 
 The code for this video is available at the GitHub site:
-https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video73
+https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video75
 
 # Files
 
