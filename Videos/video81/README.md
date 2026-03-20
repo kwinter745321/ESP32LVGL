@@ -28,6 +28,11 @@ The video Demonstrates:
 
  # Files
 
- - platform.ini
- - main.cpp  (three separate versions)
- -
+ - PlatformIO Files
+   - platform.ini
+   - sample_ui/ui_events.c - This has the countClicks() function
+   - main.cpp (three seperate folders)
+
+ - SquareLine Studio Files
+   - Export UI Files (zip)
+   - Project (zip)
