@@ -28,6 +28,9 @@ The video Demonstrates:
 
  # Files
 
+ - LVGL
+   - lv_conf.h
+
  - PlatformIO Files
    - platform.ini
    - sample_ui/ui_events.c - This has the countClicks() function
