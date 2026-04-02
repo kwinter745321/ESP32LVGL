@@ -1,14 +1,14 @@
 # test_clock_gc9a01.py
 #
 # Created: 17 October 2025
+# Updated: 01 April 2026
 #
 # Copyright (C) 2025 KW Services.
 # MIT License
 #
 # Verified on:
-# MicroPython v1.20.0-724-gbf1107420 on 2025-02-19;
-# Raspberry Pi Pico with RP2040
-# LVGL 9.1
+# MicroPython v1.20.0-2510.gacfeb7b7e.dirty on 2026-04-01;
+# ESP32C3 module with ESP32C3
 #
 import lvgl as lv
 from machine import SPI, Pin
