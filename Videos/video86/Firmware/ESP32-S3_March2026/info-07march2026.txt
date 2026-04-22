@@ -1,0 +1,13 @@
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+or from the "/home/lv_micropython/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+bootloader  @0x000000    19152  (   13616 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2615248  (  530480 remaining)
+total                  2680784
+root@912522728cca:/home/lv_micropython/ports/esp32# mc
