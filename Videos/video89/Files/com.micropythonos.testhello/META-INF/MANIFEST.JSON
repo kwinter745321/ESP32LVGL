@@ -1,0 +1,21 @@
+{
+"name": "TestHello",
+"publisher": "KW Services",
+"short_description": "Minimal test app",
+"long_description": "Demonstrates the test app.",
+"fullname": "com.micropythonos.testhello",
+"version": "0.0.1",
+"category": "development",
+"activities": [
+    {
+      "entrypoint": "assets/hello.py",
+      "classname": "Hello",
+      "intent_filters": [
+        {
+          "action": "main",
+          "category": "launcher"
+        }
+      ]
+    }
+  ]
+}
