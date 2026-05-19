@@ -1,0 +1,17 @@
+Successfully created esp32s3 image.
+Generated /home/micropython/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+[2438/2438] cd /home/micropython/ports/esp32/build-ESP32_GENERIC_S...thon/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+micropython.bin binary size 0x26af80 bytes. Smallest app partition is 0x300000 bytes. 0x95080 bytes (19%) free.
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0xd000 build-ESP32_GENERIC_S3-SPIRAM_OCT/ota_data_initial.bin 0x10000 build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+or from the "/home/micropython/ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+bootloader  @0x000000    19232  (   13536 remaining)
+partitions  @0x008000     3072  (    1024 remaining)
+application @0x010000  2535296  (  610432 remaining)
+total                  2600832
