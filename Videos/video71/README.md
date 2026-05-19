@@ -2,6 +2,8 @@
 
 11 January 2026
 
+ - 19 May 2026 - Extra (see below)
+
 # Scope
 This is video 71 on an Arduino LVGL embedded solution. In this video, we add a DSI display to the ESP32-P4 board in a previous video.  We utilize Arduino and the Waveshare demo software to setup a LVGL environment.  Then, we use our test_slider program to help orient the screen in Landscape mode.  
 
@@ -33,3 +35,10 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video71
 
  -  This is a link to the demo software in a zip file from Waveshare:
             https://drive.google.com/file/d/1RizQiBkyXZ7rcbHLdYhvHiFMcQuvkNjN/view?usp=sharing
+
+# Extra - 19 May 2026
+
+ - a zip of the software from waveshare
+
+To re-verify, I recompiled the HelloWorld.ino and then the LVGL9_Arduino.ino.  They worked, BUT... (a) first I made a copy of the Arduino/libraries directory (b) deleted the lvgl folder and the lvgl.h (c) copied the three folders (display, GFX_Library_for_Arduino, lvgl) into libraries directory.  Also I copied the lvgl.h file to Arduino/libraries directory (it sits outside of the lvgl folder).
+
