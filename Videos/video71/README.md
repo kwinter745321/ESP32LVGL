@@ -38,7 +38,7 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video71
 
 # Extra - 19 May 2026
 
- - a zip of the software from waveshare
+ - Using WaveShare source (You must use this otherwise you get compile errors)
 
 To re-verify, I recompiled the HelloWorld.ino and then the LVGL9_Arduino.ino.  They worked, BUT... (a) first I made a copy of the Arduino/libraries directory (b) deleted the lvgl folder and the lvgl.h (c) copied the three folders (display, GFX_Library_for_Arduino, lvgl) into libraries directory.  Also I copied the lvgl.h file to Arduino/libraries directory (it sits outside of the lvgl folder).
 
