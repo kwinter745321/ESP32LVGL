@@ -1,0 +1,19 @@
+{
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": { 
+        "reportMissingModuleSource": "none",
+        "reportAttributeAccessIssue" : "none",
+        "reportOptionalMemberAccess" : "none",
+        "reportMissingImports": "none",
+        "reportCallIssue" : "none",
+        "reportArgumentType" : "none",
+    },
+    "python.analysis.stubPath": ".typings",
+    "python.analysis.extraPaths": [
+        "C:/Testing/video92/my_stub_workspace/typings/lvgl-9x",
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python.terminal.activateEnvironment": false,
+}
