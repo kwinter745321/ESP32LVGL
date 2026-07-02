@@ -1,0 +1,6 @@
+{
+    0: ["Colors","Red","Green"],
+    1: ["Count", "1","2","3","4","^"],
+    2: ["ESP32","time","gyro"],
+    3: ["PC-Apps","Note","Term","Calc"]
+}

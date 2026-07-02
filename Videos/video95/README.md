@@ -18,10 +18,16 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video95
 
 # Files
 
-- Firmware
+- Firmware (banner: MicroPython v1.28.0-dirty on 2026-06-28; Generic ESP32S3 module with Octal-SPIRAM with ESP32S3)
+  - Rebuilt the 28 May firmware.  This Contains MP 1.28.0, LVGL 9.5 and ulab
+  - We included the partition map
 
 - Desktop
+  - Our test programs.  
 
 - Desktop-Python
+  - connect2menu.py - Connect the Smart Touch Pad to a COMport and then start this program.
 
 - Flash
+  - The various driver files (we left out XPT2046 since its not used on this device)
+  - The CST816 driver was modified from that provided by manufacturer. It seems a bit jittery, press the widget slowly.
