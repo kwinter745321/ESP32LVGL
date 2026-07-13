@@ -11,11 +11,11 @@ Actually, we want to use this environment for a future video.  But we thought it
 You can fetch the firmware files generated during the making of this video from our ESP32LVGL GitHub site. 
 
 In this video, we demonstrate the following steps:
-    • We follow the ESP-IDF setup instructions as found on a Waveshare WIKI project.
-    • Download of and using the ESP-IDF Installation Manager to build ESP-IDF v5.5.4 environment.
-    • Download of and using the Visual Studio Code and setup of the ESP-IDF extension.
-    • Selection and configuration of the Blink example.
-    • Deploy of the Blink firmware onto an ESP32-S3 target device using esptool.
+ - We follow the ESP-IDF setup instructions as found on a Waveshare WIKI project.
+ - Download of and using the ESP-IDF Installation Manager to build ESP-IDF v5.5.4 environment.
+ - Download of and using the Visual Studio Code and setup of the ESP-IDF extension.
+ - Selection and configuration of the Blink example.
+ - Deploy of the Blink firmware onto an ESP32-S3 target device using esptool.
 
 The code for this video is available at the GitHub site:
 https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video97
@@ -23,3 +23,12 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video97
 # Files
 
 - Firmware
+    - blink.bin  (the application)
+    - bootloader.bin
+    - partition-table.bin
+    - info.txt   (esptool command)
+
+# ESPTOOL Command
+
+esptool --chip esp32s3 --port PORT --baud 921600 --before default-reset --after hard-reset write-flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x0 bootloader.bin 0x8000 partition-table.bin 0x10000 blink.bin
+

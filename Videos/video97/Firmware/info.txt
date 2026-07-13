@@ -1,0 +1,1 @@
+ --chip esp32s3 --port PORT --baud 921600 --before default-reset --after hard-reset write-flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x0 bootloader.bin 0x8000 partition-table.bin 0x10000 blink.bin
