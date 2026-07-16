@@ -6,7 +6,7 @@
 This is video 98 on a Home Assistant ESPHome/LVGL embedded solution. In this video we explore an interesting Round Touch LCD made by WaveShare called the ESP32-S3-Touch-LCD-1.46. The community provides several example projects.  Our project is the result of integrating ideas from three makers, and our design for the LVGL graphic screens.  This project can be easily expanded in the future.  
 
 The listener should be using the latest ESPHome Device Builder (at least the June Release 2026.06.1).  
-The Test Rig is the device attached to a mount that we 3D printed. You can fetch the YAML and 3D (stl)files from our GitHub site, and begin using it immediately.  
+The Test Rig is the device attached to a mount that we 3D printed. You can fetch the YAML and 3D (stl) files from our GitHub site, and begin using it immediately.  
 
 In this video, 
  - Demonstrate the ESPHome device operations.
