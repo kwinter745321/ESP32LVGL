@@ -5,11 +5,10 @@
 # Scope
 This is video 102 on a MicroPython LVGL embedded solution. In today’s video we create a fun program that uses ESP-NOW.  Our Test Rigs are two ESP32-S3 N16R8 USB boards with a medium-size 320 by 480 pixel TFT touch displays.  This is a complete project; you will be able to transmit and receives message between a pair of devices. We put the single program on both devices, and configure them via touch buttons. The program has two LVGL screen pages.  Although just a few LVGL widgets, we do cover multiple types of LVGL objects and their interactions.
  
-
 In this video, 
  - Demonstrate the chat_display.py program on two Test Rigs and their interactions.
  - Briefly review the ESP-NOW capabilities in MicroPython.
- - Describe the wiring of the Touch Displayand the SP32-S3 device.
+ - Describe the wiring of the Touch, Display, and the ESP32-S3 device.
  - Demonstrate the Settings page and show configuration.
 
 
