@@ -7,10 +7,10 @@ This is video 102 on a MicroPython LVGL embedded solution. In today’s video we
  
 
 In this video, 
-    • Demonstrate the chat_display.py program on two Test Rigs and their interactions.
-    • Briefly review the ESP-NOW capabilities in MicroPython.
-    • Describe the wiring of the Touch Displayand the SP32-S3 device.
-    • Demonstrate the Settings page and show configuration.
+ - Demonstrate the chat_display.py program on two Test Rigs and their interactions.
+ - Briefly review the ESP-NOW capabilities in MicroPython.
+ - Describe the wiring of the Touch Displayand the SP32-S3 device.
+ - Demonstrate the Settings page and show configuration.
 
 
 The code for this video is available at the GitHub site:
@@ -19,9 +19,11 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video102
 # Files
 
  - Desktop
+   - chat2_display.py
 
  - Flash_peer00_st7796
+   - Various driver files.  The main driver is display_driver, which ere setups up the ST7796.
 
  - Flash_peer01_ili9488
-
+   - Various driver files.  The main driver is display_driver, which ere setups up the ILI9488.
  
