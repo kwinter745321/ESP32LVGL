@@ -34,7 +34,8 @@ For this video we built three Test Rigs.
    - test_ulab_mpu6050.py
 
  - Flash-xxxx
+ - The display_driver is where you update pin assignments
 
-   - display_driver.py Here is where you updat pin assignments
-   - dd.py (temporary name) My first attempt to improve this file. let me know what you think
+   - display_driver.py   (Original)
+   - dd.py (temporary name) My first attempt to improve this file. Edit pins here; let me know what you think.
    - various other driver files
