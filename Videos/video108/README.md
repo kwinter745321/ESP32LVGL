@@ -19,8 +19,16 @@ https://github.com/kwinter745321/ESP32LVGL/tree/main/Videos/video108
 At this GitHub site there are three groups of files; a firmware, a directory with Flash files, and finally a Desktop directory with test programs.  Grab the firmware and install it first.  Then load the Flash directory files using a program like Thonny. Finally you can open test_calendar_lcdbus.py in Thonny. 
 
 - Firmware
+    - There are two bin files.  
+    - This one lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin is for generic ESP32-S3 N8R8 devices.  (5MB of storage)
+    - If you have a N16R8 (in other words a device with 16 MB flash) then use this lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin (13 MB storage)
 
-- Deskop
+- Desktop
+    - various test programs. 
+    - if you like color then try test_matrix3_lcdbus.py
 
 - Flash
+    - various flash files. 
+    - display_driver is where pins are defined
+    - the sdcard driver works but not with the application
 
