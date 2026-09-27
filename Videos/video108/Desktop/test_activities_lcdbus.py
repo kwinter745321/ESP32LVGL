@@ -1,6 +1,7 @@
 # test_activities_lcdbus.py v1.0
 #
 # Created: 25 September 2026
+# Updated: 27 September 2026
 #
 # Copyright (C) 2025 KW Services.
 # MIT License
@@ -168,7 +169,8 @@ class MonthView:
         self.year = 0
         self.month = 0
         self.day = 0
-        self._build_ui()
+        self.scr = None
+        self.day_view = DayView(self.scheduler, '2026-09-01')
         
     def today(self):
         text = f"{self.year}-{self.month}-{self.day}"
@@ -187,19 +189,27 @@ class MonthView:
             self.day = 25
         return self.year,self.month,self.day
 
-    def _build_ui(self):
-        scr = lv.screen_active()
-        scr.clean()
-        gc.collect()
-        lv.screen_load(scr)
+    def show(self):
+        """Call this to display the MonthView screen."""
+        if self.scr is None:
+            self._build_ui()
+        lv.screen_load(self.scr)
         gc.collect()
         #print(f"Heap:{gc.mem_free()}")
+
+
+    def _build_ui(self):
+        if self.scr is not None:
+            return
+
+        self.scr = lv.obj()
+        lv.screen_load(self.scr)
 
         # Get today's date
         year, month, day = self.get_today()
 
         # Main container
-        mv_box = lv.obj(scr)
+        mv_box = lv.obj(self.scr)
         mv_box.set_size(lv.pct(100), lv.pct(100))
         mv_box.set_flex_flow(lv.FLEX_FLOW.COLUMN_WRAP)
         mv_box.set_flex_align(lv.FLEX_ALIGN.START, lv.FLEX_ALIGN.START, lv.FLEX_ALIGN.START)
@@ -287,7 +297,8 @@ class MonthView:
             date = lv.calendar_date_t()
             cal.get_pressed_date(date)
             self.selected_date = f"{date.year:04}-{date.month:02}-{date.day:02}"
-            DayView(self.scheduler, self.selected_date).show()
+            self.day_view.update_date(self.selected_date)
+            self.day_view.show()
 
     def load_activity_file(self):
         self._file_load()
@@ -353,22 +364,30 @@ class DayView:
         self.date_str = date_str
         self.selected_person = None
         self.maxsize = 34 # text for schedule
-        self._build_ui()
+        self.scr = None
+        self.event_form = EventForm(self.scheduler, PERSONS[0], '2026-09-01')
+
+    def update_date(self, new_date):
+        self.date_str = new_date
+        self.scr = None
 
     def show(self):
-        pass  # UI is built in __init__
-
-    def _build_ui(self):
-        scr = lv.screen_active()
-        scr.clean()
-        gc.collect()
-        lv.screen_load(scr)
+        if self.scr is None:
+            self._build_ui()
+        lv.screen_load(self.scr)
         gc.collect()
         #print(f"Heap:{gc.mem_free()}")
+
+    def _build_ui(self):
+        if self.scr is not None:
+            return
+        self.scr = lv.obj()
+        lv.screen_load(self.scr)
+        gc.collect()
         #scr.set_style_bg_color(lv.color_black(), 0)
 
         # Header
-        btn_header = lv.button(scr)
+        btn_header = lv.button(self.scr)
         btn_header.set_size(lv.pct(100),50)
         btn_header.set_style_bg_color(theme.bg, 0)
         btn_header.add_event_cb(self._back_cb, lv.EVENT.CLICKED, None)
@@ -381,7 +400,7 @@ class DayView:
         lbl_header.set_align(lv.ALIGN.CENTER)
 
         # # Back button
-        back_btn = lv.button(scr)
+        back_btn = lv.button(self.scr)
         back_btn.set_size(80, 50)
         back_btn.set_align(lv.ALIGN.TOP_LEFT)
         back_lbl = lv.label(back_btn)
@@ -390,7 +409,7 @@ class DayView:
         back_btn.add_event_cb(self._back_cb, lv.EVENT.CLICKED, None)
 
         # List of people
-        list_box = lv.obj(scr)
+        list_box = lv.obj(self.scr)
         list_box.set_pos(0,50)
         list_box.set_size(lv.pct(100),430)
         #list_box.set_align(lv.ALIGN.CENTER)
@@ -458,7 +477,8 @@ class DayView:
                 lblact.set_text("No activities scheduled.")
 
     def _back_cb(self, e):
-        MonthView(self.scheduler)._build_ui()
+        month_view.show()
+        month_view._update_highlights()
 
 
     def _person_cb(self, e):
@@ -468,7 +488,8 @@ class DayView:
             lbl = btnperson.get_child(0)
             person = lbl.get_text()
             self.selected_person = person
-            EventForm(self.scheduler, person, self.date_str).show()
+            self.event_form.update_person_date(person, self.date_str)
+            self.event_form.show()
 
 
 class EventForm:
@@ -479,22 +500,28 @@ class EventForm:
         self.ta_time = None
         self.ta_activity = None
         self.btn_submit = None
-        self.scr = lv.obj()
-        lv.screen_load(self.scr)
-        self._build_ui()
-        self._balloons()
+        self.scr = None
+
+    def update_person_date(self, new_person, new_date):
+        self.person = new_person
+        self.date_str = new_date
+        self.scr = None
 
     def show(self):
-        pass  # UI is built in __init__
-
-    def _build_ui(self):
-        scr = lv.screen_active()
-        scr.clean()
-        gc.collect()
-        lv.screen_load(scr)
+        if self.scr is None:
+            self._build_ui()
+            self._balloons()
+        lv.screen_load(self.scr)
         gc.collect()
         #print(f"Heap:{gc.mem_free()}")
+
+    def _build_ui(self):
+        if self.scr is not None:
+            return
+
+        self.scr = lv.obj()
         self.scr.set_style_bg_color(lv.color_black(), 0)
+        lv.screen_load(self.scr)
 
         # Header
         header = lv.label(self.scr)
@@ -649,6 +676,19 @@ class EventForm:
             lbl_act.set_text(f"{t}")
             lbl_act.center()
 
+    def show_balloons_time(self):
+        self.balloon_time.remove_flag(lv.obj.FLAG.HIDDEN)
+
+    def hide_balloons_time(self):
+        self.balloon_time.add_flag(lv.obj.FLAG.HIDDEN)
+
+    def show_balloons_act(self):
+        self.balloon_act.remove_flag(lv.obj.FLAG.HIDDEN)
+
+    def hide_balloons_act(self):
+        self.balloon_act.add_flag(lv.obj.FLAG.HIDDEN)
+
+
     def _ta_event_cb(self, e):
         code = e.get_code()
         ta = e.get_target_obj()
@@ -657,13 +697,17 @@ class EventForm:
             text = ta.get_placeholder_text()
             lv.group_focus_obj(ta)
             if text == "HH:MM":
-                self.balloon_time.remove_flag(lv.obj.FLAG.HIDDEN)
+                #self.balloon_time.remove_flag(lv.obj.FLAG.HIDDEN)
+                self.show_balloons_time()
             else:
-                self.balloon_act.remove_flag(lv.obj.FLAG.HIDDEN)
+                #self.balloon_act.remove_flag(lv.obj.FLAG.HIDDEN)
+                self.show_balloons_act()
         if code == lv.EVENT.DEFOCUSED:
-            self.balloon_act.add_flag(lv.obj.FLAG.HIDDEN)
+            #self.balloon_act.add_flag(lv.obj.FLAG.HIDDEN)
+            self.hide_balloons_act()
         if code == lv.EVENT.DEFOCUSED and len(text) > 4:
-            self.balloon_time.add_flag(lv.obj.FLAG.HIDDEN)
+            #self.balloon_time.add_flag(lv.obj.FLAG.HIDDEN)
+            self.hide_balloons_time()
 
 
     def _submit_cb(self, e):
@@ -672,10 +716,10 @@ class EventForm:
         if not time_text or not act_text:
             return
         self.scheduler.add_activity(self.person, self.date_str, time_text, act_text)
-        DayView(self.scheduler, self.date_str)._build_ui()
+        DayView(self.scheduler, self.date_str).show()
 
     def _back_cb(self, e):
-        DayView(self.scheduler, self.date_str)._build_ui()
+        DayView(self.scheduler, self.date_str).show()
 
     def have_data(self):
         time = self.ta_time.get_text()
@@ -689,6 +733,7 @@ class EventForm:
 if __name__ == "__main__":
     scheduler = ActivityScheduler(PERSONS)
     month_view = MonthView(scheduler)
+    month_view.show()
     if LOAD_AT_STARTUP:
         #month_view.load_activity_file()
         #DayView(scheduler,month_view.today() )
@@ -699,6 +744,7 @@ else:
     rtc.datetime((2026, 9, 25,4,12,30,0,0))
     scheduler = ActivityScheduler(PERSONS)
     month_view = MonthView(scheduler)
+    month_view.show()
     if LOAD_AT_STARTUP:
         #month_view.load_activity_file()
         #DayView(scheduler,'2026-09-21')
