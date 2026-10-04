@@ -13,7 +13,6 @@ import machine
 import time
 import socket
 import asyncio
-#import select
 
 import openthread
 
