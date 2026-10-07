@@ -23,6 +23,15 @@ At this GitHub site there are three groups of files; a firmware, a directory wit
     - This one lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin is for generic ESP32-S3 N8R8 devices.  (5MB of storage)
     - If you have a N16R8 (in other words a device with 16 MB flash) then use this lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin (13 MB storage)
 
+
+- Sometimes you might need to use the esptool to flash the bin image to your ESP32 device.  If you do, then you use python, like so: python -m xxx   Where xxx is the command below.  In our case we pip install esptool in our python so we only need the esptool comand as shown below
+
+  - Flash=16MB
+    - esptool --chip esp32s3 -p COM39 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m --erase-all 0x0 lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin
+
+  - Flash=8MB
+    - esptool --chip esp32s3 -p (PORT) -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m --erase-all 0x0 lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-8.bin
+
 - Desktop
     - various test programs. 
     - if you like color then try test_matrix3_lcdbus.py
