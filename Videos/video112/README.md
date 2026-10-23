@@ -32,7 +32,10 @@ My LCD Wizard account was upgraded to Pro in order to test and evaluate the serv
 # Files
 
 - Code 
-  - ui_events.c - Demonstrates a custom event
+  - ui_events.c - Demonstrates a custom event (create and pop balloons)
+
+- Advanced
+  - ui_events.c - Demonstrates a custom event (create and pop balloons with animation)
 
 - Export
   - MyGame.zip - Contains Arduino sketch and supporting User Interface
