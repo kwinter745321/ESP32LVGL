@@ -18,3 +18,20 @@ Background music is 7th Life by Adam MacDougall which is You Tube Licensed as no
 
 # Files
 
+ - Firmware
+   - ESP32-S3-SPIRAM_OCT-N16R8
+
+ - Desktop
+   - test_button3_display.py
+   - test_matrix3_display.py
+   - test_split_display.py
+   - test_heap_afterimport.py
+   - test_game-go_display.py
+
+ - Flash
+   - dd.py (improved version of display_driver.py)
+   - display_driver.py
+   - ili9xxx.py  (updated)
+   - st77xx.py  (updated)
+   - xpt2046.py
+   
